@@ -1,0 +1,222 @@
+.hero
+  background: $backgrounds url('../img/hero/hero-bg.png')  no-repeat center bottom 
+  &__contacts
+    display: flex
+    flex-direction: column
+    margin-bottom: 34px
+    &__image
+      width: 15px
+      height: 15px
+      margin-top: 17px
+  &__information
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    padding-bottom: 86px
+  &__brand
+    display: flex
+    flex-direction: column
+    margin-bottom: 34px
+    &::before
+      content: ''
+      width: 30px
+      height: 1px
+      background: $borderline
+      display: block
+      margin-bottom: 16px
+    &__title
+      max-width: 180px
+      margin-bottom: 10px
+      color: $logotext
+      font-family: 'DINPro'
+      font-size: 14px
+      font-weight: 400
+      line-height: 18px
+      letter-spacing: 0.14px
+    &__price
+      font-family: 'DINPro'
+      font-weight: 400
+      color: $orange
+      font-size: 24px
+      letter-spacing: 0.24px
+  &__wrap
+    display: flex
+    flex-direction: row
+  &__navigation
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    &__text
+      color: $logotext
+      font-family: 'DINPro'
+      margin-left: 10px
+      position: relative
+    &__title
+      font-size: 24px
+      font-weight: 500
+      line-height: 30px
+      text-transform: uppercase
+      letter-spacing: 2.16px
+      padding-top: 10px
+      margin: 0
+    &__subtitle
+      font-size: 12px
+      font-weight: 400
+      line-height: 30px
+      letter-spacing: 0.12px
+      position: absolute
+      top: 30px
+    &__logo
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      &__image
+        width: 60px
+        height: 60px
+    &__navbar
+      display: flex
+      &__image
+        width: 16px
+        height: 16px
+        margin-top: 9px
+      & a
+        margin-right: 35px
+        text-decoration: none
+        color: $logotext
+        font-family: 'DINPro'
+        font-size: 17px
+        font-weight: 600
+        line-height: 30px
+        &:nth-of-type(2)
+          position: relative
+        &:nth-of-type(2)
+          &::before
+           content: '\003E'
+           color: $orange
+           position: absolute
+           right: -7px
+           transform: rotate(90deg) 
+        &:nth-of-type(2)
+          &::after
+            content: ''
+            margin-top: 10px
+            width: 80px
+            height: 1px
+            background-color: $orange
+            display: block
+  &__flag
+    margin-left: 12px
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    width: 60px
+    height: 85px
+    border-left: 1px solid $line
+    border-right: 1px solid $line
+    &:nth-last-child(1)
+      background-color: $orange
+      border-left: 1px solid $orange
+      border-right: 1px solid $orange
+    &__image
+      margin-top: 16px
+      width: 20px
+      height: 20px
+    &__number
+      margin-top: 9px
+      color: $orange
+    &__numbers
+      margin-top: 9px
+      color: $light
+    &::after
+      content: ''
+      bottom: -23px
+      height: 29px
+      background-color: $backgrounds
+      left: 4px
+      position: absolute
+      display: flex
+      width: 30px
+      border-bottom: 1px solid $line
+      transform: rotate(-200deg)
+    &::before
+      content: ''
+      bottom: -23px
+      height: 29px
+      background-color: $backgrounds
+      position: absolute
+      display: flex
+      right: 3px
+      width: 32px
+      border-bottom: 1px solid $line
+      transform: rotate(200deg)
+    // слайдер
+.swiper
+  &-text
+    color: $logotext
+    font-family: 'DINPro'
+    font-size: 36px
+    font-weight: 300
+    line-height: 48px
+    text-transform: uppercase
+    letter-spacing: 0.36px
+    &::before
+      content: ''
+      display: block
+      margin-bottom: 30px
+      margin-top: 30px
+      width: 50px
+      border: 1px solid $borderline
+    &-weight
+      font-weight: 700
+      letter-spacing: 0.36px
+  &-buttons
+    padding: 15px 30px
+    background-color: $logotext
+    color: $light
+    font-family: 'DINPro'
+    font-size: 18px
+    font-weight: 400
+    line-height: 23px
+    letter-spacing: 0.18px
+    text-decoration: none
+    align-self: self-end
+    margin-bottom: 37px
+    &:hover
+      background-color: $borderline
+    &::after
+      content: '\003E'
+      color: $light
+      margin-left: 9px
+      &:hover
+  &-slide 
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-bottom: 78px
+    &::after
+      content: ''
+      margin-bottom: 7px
+      width: 50px
+      border: 1px solid #cccccc
+      align-self: flex-start
+  &-button
+    &-next, &-prev
+      bottom: 0
+      top: auto
+      background-size: 42px
+      width: 45px
+      height: 45px
+      border: 1px solid $line
+      &::after
+        display: none
+    &-next
+      background: $logotext url('../img/hero/arrow-next.svg') no-repeat center
+      background-size: 40%
+      left: 65px
+    &-prev
+      background: $logotext url('../img/hero/arrow-prev.svg') no-repeat center
+      background-size: 40%

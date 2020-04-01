@@ -3,9 +3,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Школьная форма</title>
 </head>
 <body>
-  
+<header class="header">
+  <div class="header__informations">
+    <div class="container">
+      <div class="header__list">
+        <div class="header__network">
+          <img src="img/header/logo.png" alt="" class="header__logo">
+          <ul>
+            <li class="header__network__list"><a href="#">Соц. сети</a><img src="img/header/comment-dots-solid.svg" alt="" class="header__network__image"></li>
+            <li class="header__network__list"><a href="#">Торгов. сети</a><img src="img/header/shopping-cart.svg" alt="" class="header__network__image"></li>
+            <li class="header__network__list"><a href="#">Туристич. сети</a><img src="img/header/internet.svg" alt="" class="header__network__image"></li>
+            <li class="header__network__list"><a href="#">Ассоциации</a><img src="img/header/eye.svg" alt="" class="header__network__image"></li>
+            <li class="header__network__list"><a href="#">Сервисы </a><img src="img/header/wrench.svg" alt="" class="header__network__image"></li>
+            <li class="header__network__list"><img src="img/header/android.svg" alt="" class="header__network__image header__network__image__last"></li>
+          </ul>
+        </div>
+        <div class="header__list__goin"><a href="#">Вход на сайт</a><img src="img/header/lock.svg" alt="" class="header__list__goin__image"></div>
+      </div>
+      <!-- /.header__list -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.informations -->
+</header>
+<!-- /.header -->
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero__navigation">
+        <div class="hero__navigation__logo">
+          <img src="img/hero/Vector_Smart_Object.png" alt="" class="hero__navigation__logo__image">
+          <div class="hero__navigation__text">
+            <h1 class="hero__navigation__title">BMC SALES</h1>
+            <span class="hero__navigation__subtitle">партнерская сеть продаж</span>
+          </div>
+        </div>
+        <!-- /.hero__navigation__logo -->
+        <nav class="hero__navigation__navbar">
+          <a href="#">Объявления</a>
+          <a href="#">Каталоги</a>
+          <a href="#">Участники</a>
+          <a href="#">Партнеры</a>
+          <a href="#">О платформе</a>
+          <a href="#">Новости</a>
+          <img src="img/hero/search.svg" alt="" class="hero__navigation__navbar__image">
+        </nav>
+        <div class="hero__wrap">
+          <div class="hero__flag">
+            <img src="img/hero/heart.svg" alt="" class="hero__flag__image">
+            <span class="hero__flag__number">2</span>
+          </div>
+          <div class="hero__flag">
+            <img src="img/hero/basket.svg" alt="" class="hero__flag__image">
+            <span class="hero__flag__numbers">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- /.navigation -->
+      <div class="hero__information">
+        <div class="col-30">
+          <!-- Swiper -->
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h3 class="swiper-text">Школьная форма <br>по <span class="swiper-text-weight">самым выгодным</span> <br>ценам</h3>
+                <a href="#" class="swiper-buttons">Подробнее</a>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="swiper-text">Школьная форма <br>по <span class="swiper-text-weight">самым выгодным</span> <br>ценам</h3>
+                <a href="#" class="swiper-buttons">Подробнее</a>
+              </div>
+              <div class="swiper-slide">
+                <h3 class="swiper-text">Школьная форма <br>по <span class="swiper-text-weight">самым выгодным</span> <br>ценам</h3>
+                <a href="#" class="swiper-buttons">Подробнее</a>
+              </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+        <div class="col-30">
+          <div class="hero__brand">
+            <span class="hero__brand__title">Комплект школьной формы
+              «Модерн-стиль»</span>
+            <span class="hero__brand__price"><span class="hero__brand__title">от</span> 9000 <span class="hero__brand__title">тг.</span></span>
+          </div>
+          <!-- /.brand -->
+          <div class="hero__contacts">
+            <a href="#"><img src="img/hero/twitter.svg" alt="twitter" class="hero__contacts__image"></a>
+            <a href="#"><img src="img/hero/facebook.svg" alt="facebook" class="hero__contacts__image"></a>
+            <a href="#"><img src="img/hero/vk.svg" alt="vk" class="hero__contacts__image"></a>
+            <a href="#"><img src="img/hero/youtube.svg" alt="youtube" class="hero__contacts__image"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.hero -->
+</main>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,78 @@
+@media screen and ( max-width: 1158px )
+  .hero
+    &__navigation
+      &__logo
+        display: none
+      &__navbar 
+        margin: auto
+@media screen and ( max-width: 951px )
+  .header
+    &__network
+      &__image
+        &__last
+          display: none
+  .hero
+    &__flag
+      display: none
+    &__navigation
+      &__navbar 
+        margin-top: 10px
+@media screen and ( max-width: 888px )
+  .header
+    &__network
+      padding-top: 10px
+      justify-content: center
+      margin: auto
+      &__list
+        display: none
+  .header
+    &__list
+      &__goin 
+        margin: auto
+  .hero
+    background: $backgrounds
+    &__information
+      display: flex
+      flex-direction: column
+      justify-content: center
+  .col-30
+    width: 100% !important
+  .swiper
+    &-buttons
+      align-self: center
+    &-slide
+      &::after
+        align-self: center
+    &-button
+      &-next
+        left: 51% 
+      &-prev 
+        left: 44%
+@media screen and ( max-width: 761px )
+  .hero
+    &__navigation
+      &__navbar
+        & a 
+          margin-right: 17px
+@media screen and ( max-width: 646px )
+  .hero
+    &__navigation
+      &__navbar
+        display: none
+  .swiper
+    &-button
+      &-next
+        left: 53% 
+      &-prev 
+        left: 42%
+@media screen and ( max-width: 438px )
+  .swiper 
+    &-text 
+      text-align: center
+      &::before
+        margin: auto
+    &-button
+      &-prev
+        left: 37%
+      &-next 
+        left: 50%
