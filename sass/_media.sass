@@ -1,3 +1,27 @@
+@media screen and ( max-width: 1379px )
+  .forms
+    &__card
+      flex-direction: column
+      justify-content: center
+    &__rows
+      justify-content: space-around
+    &__information
+      align-items: center
+      margin-top: 10px
+@media screen and ( max-width: 1315px )
+  .categories
+    &__rows
+      &__button
+        &:nth-of-type(4)
+          margin-right: 30px
+@media screen and ( max-width: 1171px )
+  .mobileapp
+    &__text
+      &__title
+        font-size: 60px
+    &__image
+      display: none
+
 @media screen and ( max-width: 1158px )
   .hero
     &__navigation
@@ -5,6 +29,38 @@
         display: none
       &__navbar 
         margin: auto
+@media screen and ( max-width: 1036px )
+  .forms
+    &__header
+      &::before
+        display: none
+      &::after
+        display: none
+@media screen and ( max-width: 992px )
+  .footer
+    &__list
+      display: none
+@media screen and ( max-width: 1067px )
+  .timer
+    &__wraps
+      text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
+    &__circle
+      &__wraps
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-basis: 30%
+    &__space
+      flex-basis: 30%
+    &__space
+      &__media
+        display: none
+      & img
+        margin: auto
+        
 @media screen and ( max-width: 951px )
   .header
     &__network
@@ -17,6 +73,7 @@
     &__navigation
       &__navbar 
         margin-top: 10px
+
 @media screen and ( max-width: 888px )
   .header
     &__network
@@ -48,12 +105,44 @@
         left: 51% 
       &-prev 
         left: 44%
+@media screen and ( max-width: 768px )
+  .footer
+    &__wraps
+      display: none
+    &__down
+      margin-top: 30px
+  .timer
+    display: none
 @media screen and ( max-width: 761px )
   .hero
     &__navigation
       &__navbar
         & a 
           margin-right: 17px
+@media screen and ( max-width: 740px )
+  .forms
+    &__rows
+      flex-direction: column
+      align-items: center
+    &__card
+      margin-bottom: 20px
+      flex-direction: row
+      justify-content: flex-end
+    &__information
+      margin-top: 53px
+@media screen and ( max-width: 570px )
+  .categories
+    &__rows
+      &__button
+        margin-right: 0
+        &:nth-of-type(4)
+          margin-right: 0
+@media screen and ( max-width: 612px )
+  .footer
+    &__down
+      &__wraps
+        flex-direction: column
+        align-items: center
 @media screen and ( max-width: 646px )
   .hero
     &__navigation
@@ -65,6 +154,16 @@
         left: 53% 
       &-prev 
         left: 42%
+@media screen and ( max-width: 575px )
+  .mobileapp
+    &__text
+      &__title
+        font-size: 40px
+        line-height: 40px
+  .forms
+    display: none
+  .services
+    display: none
 @media screen and ( max-width: 438px )
   .swiper 
     &-text 

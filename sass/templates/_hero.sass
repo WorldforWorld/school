@@ -153,6 +153,14 @@
       border-bottom: 1px solid $line
       transform: rotate(200deg)
     // слайдер
+.hero
+  &__slide
+    &::after
+      content: ''
+      margin-bottom: 7px
+      width: 50px
+      border: 1px solid #cccccc
+      align-self: flex-start
 .swiper
   &-text
     color: $logotext
@@ -197,12 +205,6 @@
     align-items: center
     flex-direction: column
     margin-bottom: 78px
-    &::after
-      content: ''
-      margin-bottom: 7px
-      width: 50px
-      border: 1px solid #cccccc
-      align-self: flex-start
   &-button
     &-next, &-prev
       bottom: 0

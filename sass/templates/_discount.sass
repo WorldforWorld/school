@@ -1,0 +1,57 @@
+.discount
+  &__rows
+    &__card
+      &__image
+        position: relative
+        z-index: 999
+      &__heart
+        position: absolute
+        height: 19px
+        right: 20px
+        top: 20px
+      &__more
+        position: absolute
+        height: 21px
+        right: 20px
+        top: 56px
+      &__percent
+        left: -10px
+        top: 15px
+        position: absolute
+        padding: 13px 9px
+        background: $orange
+        display: inline-block
+        color: $light
+        font-family: 'DINPro'
+        font-size: 30px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: -0.3px
+        &::after
+          content: ''
+          position: absolute
+          display: flex
+          width: 15px
+          height: 10px
+          background: #ffd1b0
+          top: 44px
+          left: 2px
+          transform: rotate(30deg)
+          z-index: -1
+      &__rpicetag
+        margin-top: 10px
+        display: inline-block
+        color: $formcolor
+        font-family: 'DINPro'
+        font-size: 18px
+        font-weight: 400
+        line-height: 24px
+        text-decoration: line-through
+        &__sublist
+          margin-top: 10px
+          display: inline-block
+          color: $formcolor
+          font-family: 'DINPro'
+          font-size: 16px
+          font-weight: 400
+          text-decoration: none !important

@@ -1,0 +1,79 @@
+.forms
+  &__header
+    display: flex
+    justify-content: center
+    &::before
+      content: ''
+      display: block
+      border: 1px solid $logotext
+      transform: rotate(90deg)
+      margin-right: 78px
+    &::after
+      content: ''
+      display: block
+      border: 1px solid $logotext
+      transform: rotate(90deg)
+      margin-left: 78px
+  &__title
+    text-align: center
+    padding: 36px 60px
+    border: 2px solid $logotext
+    font-family: 'DINPro'
+    color: $logotext
+    font-weight: 700
+    letter-spacing: 0.24px
+    line-height: 30px
+    font-size: 24px
+    &__weight
+      font-weight: 300
+      letter-spacing: 0.24px
+      line-height: 30px
+      &::after
+        content: '\003E'
+        margin-left: 15px
+  &__rows
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+  &__card
+    display: flex
+    flex-direction: row
+    background-color: $formCard
+    &:nth-of-type(2) img
+      margin-left: 60px
+      margin-right: 45px
+  &__image
+    margin-top: 10px
+  &__information
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-top: 53px
+    margin-right: 50px
+    &__title
+      text-align: right
+      color: $formcolor
+      font-family: 'DINPro'
+      font-size: 14px
+      font-weight: 300
+      line-height: 24px
+      margin-bottom: -5px
+    &__subtitle
+      color: $formcolor
+      font-family: 'DINPro'
+      color: $black
+      font-size: 24px
+    & a
+      margin-top: 30px
+      text-align: center
+      padding: 13px 27px
+      color: $logotext
+      font-family: 'DINPro'
+      font-size: 14px
+      font-weight: 500
+      text-decoration: none
+      border: 2px solid $logotext
+      display: block
+      &::after
+        content: '\003E'
+        margin-left: 15px

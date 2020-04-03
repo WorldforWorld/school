@@ -1,0 +1,53 @@
+.timer
+  margin-top: 30px
+  &__header
+    &::before
+      width: 30%
+    &::after
+      width: 30%
+  &__wraps
+    margin-top: 30px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+  &__circle
+    position: relative
+    border: 2px dashed $line
+    border-radius: 50%
+    display: inline-block
+    margin-bottom: 20px
+    &__wraps
+      display: flex
+      justify-content: center
+      align-items: center
+    &__text
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      height: 194px
+      width: 194px
+    &__name
+      display: inline-block
+      color: $logotext
+      font-family: 'DINPro'
+      font-size: 30px
+      font-weight: 300
+      line-height: 40px
+    &__number
+      display: inline-block
+      color: $orange
+      font-family: 'DINPro'
+      font-size: 72px
+      font-weight: 700
+  &__subcircle
+    background: $formCard
+    margin: 4px
+    display: inline-block
+    border: 2px solid $orange
+    border-radius: 50%
+  &__space
+    display: flex
+    margin: auto
