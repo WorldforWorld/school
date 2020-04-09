@@ -1,0 +1,43 @@
+.list-wrapper 
+    overflow: hidden
+#pagination-container
+    margin-bottom: 100px
+    margin-top: 30px
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: cener
+.simple-pagination ul 
+    margin: 0 0 20px
+    padding: 0
+    list-style: none
+    text-align: center
+.simple-pagination li 
+    display: inline-block
+    margin-right: 5px
+.simple-pagination li a,
+.simple-pagination li span 
+    color: $logotext
+    padding: 15px 20px
+    text-decoration: none
+    border: 2px solid $logotext
+    background-color: $light
+    font-family: 'DINPro'
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 0.14px
+    border-radius: 0
+.simple-pagination .current 
+    color: $orange
+    background-color: $light !important
+    border-color: $orange
+.simple-pagination .prev.current,
+.simple-pagination .next.current 
+    display: none
+.next, .prev
+    background: $orange !important
+    color: $light !important
+    border-color: $orange !important
+.light-theme a
+    background: $light
+    box-shadow: none

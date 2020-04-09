@@ -10,19 +10,30 @@
     align-items: center
     justify-content: space-between
     &__goin
-      display: flex
-      align-items: center
-      & a
-        margin-right: 5px
+      &:hover .header__list__goin__title
         color: $logotext
+      &:hover .header__list__goin__image svg
+        fill: $logotext
+      & a
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-right: 5px
+        color: $text
         font-family: 'DINPro'
         font-size: 14px
         font-weight: 400
         line-height: 30px
         text-decoration: none
         letter-spacing: 0.14px
+      &__title
+        margin-right: 10px
       &__image
-        height: 15px
+        & svg
+          fill: $text
+          height: 15px
+          width: 15px
+
   &__logo
     width: 32px
     height: 32px
@@ -38,7 +49,15 @@
       display: flex
       align-items: center
       list-style-type: none
+      margin-right: 10px
+      &:hover .header__network__image svg
+        fill: $logotext
+      &:hover .header__network__list__title
+        color: $logotext
       & a
+        display: flex
+        align-items: center
+        flex-direction: row
         margin-right: 8px
         color: $text
         font-family: 'DINPro'
@@ -47,11 +66,19 @@
         line-height: 30px
         text-decoration: none
     &__image
-      height: 15px
-      margin-right: 20px
-      padding-right: 17px
+      display: flex
+      align-items: center
+      height: 13px
       border-right:  1px solid $line
+      & svg
+        fill: $text
+        margin-left: 5px
+        margin-right: 20px
+        height: 13px
+        width: 15px
       &__last
         border-right: none
         height: 23px
+        & svg
+          height: 25px
         

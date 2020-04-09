@@ -89,23 +89,19 @@
         font-size: 17px
         font-weight: 600
         line-height: 30px
+        padding-bottom: 5px
+        height: 35px
         &:nth-of-type(2)
           position: relative
         &:nth-of-type(2)
           &::before
-           content: '\003E'
-           color: $orange
-           position: absolute
-           right: -7px
-           transform: rotate(90deg) 
-        &:nth-of-type(2)
-          &::after
-            content: ''
-            margin-top: 10px
-            width: 80px
-            height: 1px
-            background-color: $orange
-            display: block
+            content: '\003E'
+            color: $orange
+            position: absolute
+            right: -16px
+            transform: rotate(90deg)
+        &:hover
+          border-bottom: 1px solid $orange
   &__flag
     margin-left: 12px
     display: flex
