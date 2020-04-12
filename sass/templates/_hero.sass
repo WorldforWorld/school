@@ -1,31 +1,29 @@
 .hero
-  background: $backgrounds url('../img/hero/hero-bg.png')  no-repeat center bottom 
+  background: $backgrounds 
   &__contacts
     display: flex
     flex-direction: column
     margin-bottom: 34px
+    & a
+      &:hover .hero__contacts__image svg
+        fill: $logotext
+        
     &__image
-      width: 15px
-      height: 15px
       margin-top: 17px
+      & svg
+        width: 15px
+        height: 15px
+        fill: $formcolor
   &__information
     display: flex
     flex-direction: row
+    flex-grow: initial-scale
     justify-content: space-between
     align-items: flex-end
-    padding-bottom: 86px
+    // padding-bottom: 86px
   &__brand
-    display: flex
-    flex-direction: column
-    margin-bottom: 34px
-    &::before
-      content: ''
-      width: 30px
-      height: 1px
-      background: $borderline
-      display: block
-      margin-bottom: 16px
     &__title
+      position: relative
       max-width: 180px
       margin-bottom: 10px
       color: $logotext
@@ -34,6 +32,16 @@
       font-weight: 400
       line-height: 18px
       letter-spacing: 0.14px
+    &__text
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        display: flex
+        width: 30px
+        height: 1px
+        background: $borderline
+        top: -8px
     &__price
       font-family: 'DINPro'
       font-weight: 400
@@ -150,13 +158,24 @@
       transform: rotate(200deg)
     // слайдер
 .hero
+  &__brand
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
+    align-self: flex-end
+    &__text
+      display: flex
+      flex-direction: column
+      margin-bottom: 50px
+      width: 157px
   &__slide
-    &::after
-      content: ''
-      margin-bottom: 7px
-      width: 50px
-      border: 1px solid #cccccc
-      align-self: flex-start
+    &__title
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+      margin-bottom: 168px
 .swiper
   &-text
     color: $logotext
@@ -177,6 +196,7 @@
       font-weight: 700
       letter-spacing: 0.36px
   &-buttons
+    position: relative
     padding: 15px 30px
     background-color: $logotext
     color: $light
@@ -188,6 +208,15 @@
     text-decoration: none
     align-self: self-end
     margin-bottom: 37px
+    &::before
+      content: ''
+      width: 50px
+      height: 2px
+      position: absolute
+      display: flex
+      top: 91px
+      left: 0
+      background: $borderline
     &:hover
       background-color: $borderline
     &::after
@@ -197,10 +226,10 @@
       &:hover
   &-slide 
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
-    flex-direction: column
-    margin-bottom: 78px
+    flex-direction: row
+    // margin-bottom: 78px
   &-button
     &-next, &-prev
       bottom: 0
@@ -215,6 +244,14 @@
       background: $logotext url('../img/hero/arrow-next.svg') no-repeat center
       background-size: 40%
       left: 65px
+      bottom: 80px
     &-prev
       background: $logotext url('../img/hero/arrow-prev.svg') no-repeat center
       background-size: 40%
+      bottom: 80px
+.swiper-button-next.swiper-button-disabled
+  background: $light url('../img/hero/arrow-next.svg') no-repeat center
+  background-size: 40%
+.swiper-button-prev.swiper-button-disabled
+  background: $light url('../img/hero/arrow-prev.svg') no-repeat center
+  background-size: 40%
