@@ -1,4 +1,5 @@
 .product
+  margin-top: 70px
   &__rows
     margin-top: 60px
     display: flex
@@ -89,18 +90,20 @@
 .InputGroup 
   display: flex
   align-items: center
+  flex-wrap: wrap
 
   & input[type="radio"] 
     visibility: hidden /* 1 */
     height: 0 /* 2 */
     width: 0 /* 2 */
+    margin-bottom: 10px
   & label
     font-family: 'DINPro'
     font-size: 14px
     font-weight: 400
     color: $logotext
     display: flex
-    flex: auto
+    // flex: auto
     vertical-align: middle
     align-items: center
     justify-content: center
@@ -111,6 +114,7 @@
     padding-right: 18px
     user-select: none
     margin-right: 10px
+    margin-bottom: 10px
   & input[type="radio"]:checked + label 
     border: 1px solid $orange
 .box
@@ -261,6 +265,7 @@
       flex-direction: row
       justify-content: space-between
     &__contacts
+      width: auto
       display: flex
       flex-direction: row
       & img
@@ -272,6 +277,7 @@
   display: flex
   flex-flow: row wrap
   margin: 5%
+  margin-top: 0
   // label
   & label 
     background: $light
@@ -312,6 +318,7 @@
     display: flex
     flex-direction: row
     align-items: flex-start
+    margin-top: 100px
   &__about
     &__wraps
       display: flex
@@ -335,6 +342,14 @@
       font-size: 18px
       font-weight: 700
       line-height: 48px
+      & a
+        width: 50%
+        color: $logotext
+        font-family: 'DINPro'
+        font-size: 18px
+        font-weight: 700
+        line-height: 48px
+        text-decoration: none
   &__viewed
     &__card
       display: flex

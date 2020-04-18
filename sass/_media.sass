@@ -8,12 +8,31 @@
     &__information
       align-items: center
       margin-top: 10px
+      margin-bottom: 10px
+      margin-right: 0
+@media screen and ( max-width: 1367px )
+  .product
+    &__deliverymethod
+      &__first
+        &__title
+          display: flex
+          flex-wrap: nowrap
 @media screen and ( max-width: 1315px )
   .categories
     &__rows
       &__button
         &:nth-of-type(4)
           margin-right: 30px
+@media screen and ( max-width: 1303px )
+  .product
+    &__manipulations
+      &__wrap
+        align-items: center
+      &__button
+        margin-top: 10px
+        &__left
+          display: flex
+          flex-direction: column
 @media screen and ( max-width: 1171px )
   .mobileapp
     &__text
@@ -29,6 +48,15 @@
         display: none
       &__navbar 
         margin: auto
+@media screen and ( max-width: 1148px )
+  .product
+    &__position
+      flex-direction: column
+      align-items: center
+@media screen and ( max-width: 1103px )
+  .product
+    &__viewed
+      display: none
 @media screen and ( max-width: 1091px )
   .hero
     &__brand
@@ -79,6 +107,22 @@
       &__navbar 
         margin-top: 10px
 
+@media screen and ( max-width: 911px )
+  .product
+    &__rows
+      flex-direction: column
+      align-items: center
+    &__information
+      width: 100% !important
+  .fotorama
+    margin-bottom: 30px
+    width: 100% !important
+    display: flex
+    justify-content: center
+    &__stage
+      display: flex
+      margin: auto
+
 @media screen and ( max-width: 888px )
   .header
     &__network
@@ -121,6 +165,22 @@
         left: calc( 50% + 10px )
       &-prev 
         left: calc( 50% - 40px )
+  .product
+    &__manipulations
+      &__button
+        margin-right: 0
+        &__left
+          & a
+            margin-right: 0
+      &__wrap
+        flex-direction: column
+@media screen and ( max-width: 836px )
+  .product
+    &__subrows
+      justify-content: center
+    &__about
+      flex-direction: column
+      width: 100%
 @media screen and ( max-width: 768px )
   .footer
     &__wraps
@@ -146,6 +206,20 @@
       justify-content: flex-end
     &__information
       margin-top: 53px
+@media screen and ( max-width: 722px )
+  .product 
+    &__about
+      &__title
+        width: 100%
+      &__wraps
+        display: flex
+        flex-direction: column
+@media screen and ( max-width: 709px )
+  .catalog
+    &__header
+      &__assort
+        display: flex
+        flex-direction: column
 @media screen and ( max-width: 688px )
   .catalog
     &__list
@@ -164,6 +238,16 @@
       &__wraps
         flex-direction: column
         align-items: center
+@media screen and ( max-width: 648px )
+  .product
+    &__deliverymethod
+      &__first
+        &__title 
+          flex-wrap: wrap
+          flex-direction: column
+          align-items: end
+          & input[type="radio"] 
+            margin-bottom: -20px
 @media screen and ( max-width: 646px )
   .hero
     &__navigation
@@ -181,7 +265,37 @@
     display: none
   .services
     display: none
+@media screen and ( max-width: 525px )
+  .catalog
+    &__header
+      display: flex
+      flex-direction: column
+      align-items: center
+      &__assort
+        &__select
+          padding-right: 50px
 @media screen and ( max-width: 438px )
+  .product
+    &__information
+      &__subtitle
+        display: flex
+        flex-direction: column
+      &__title
+        flex-direction: column
+  .catalog
+    &__navigation
+      &__categories
+        margin-right: 0
+    &__rows
+      &__button
+        width: 290px
+  .popgoods
+    &__rows
+      &__card
+        &__image
+          height: 290px
+          & img
+            width: 290px
   .swiper 
     &-text 
       text-align: center

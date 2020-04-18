@@ -1,38 +1,40 @@
 .mobileapp
   margin-top: 100px
+  margin-bottom: 79px
   background: $orange url('../img/mobile/mobile-bg.png') no-repeat center / cover
   &__wraps
     display: flex
     flex-direction: row
-    // flex-wrap: wrap
   &__text
     display: flex
     flex-direction: column
+    margin-top: -13px
 
     &__title
+      max-width: 993px
       color: $light
       font-family: 'DINPro'
       font-size: 72px
       font-weight: 700
       line-height: 84px
       text-transform: uppercase
-      margin-bottom: 20px
+      margin-bottom: -13px
     &__subtitle
       color: $light
       font-family: 'DINPro'
       font-size: 30px
       font-weight: 400
       line-height: 84px
-      margin-bottom: 40px
+      margin-bottom: 13px
   &__more
     color: $light 
     border-color: $light
     margin: 0
     margin-bottom: 84px
     &:after
-      transform: rotate(90deg)
+      transform: rotate(0deg)
   &__image
-    width: 260px
+    width: 282px
     height: 441px
     display: flex
     align-self: flex-end
