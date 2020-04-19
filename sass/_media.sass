@@ -11,6 +11,14 @@
       margin-bottom: 10px
       margin-right: 0
 @media screen and ( max-width: 1367px )
+  .forms
+    &__title
+      &::after
+        width: 30%
+        right: -218px
+      &::before
+        width: 30%
+        left: -218px
   .product
     &__deliverymethod
       &__first
@@ -42,12 +50,32 @@
       display: none
 
 @media screen and ( max-width: 1158px )
+  .forms
+    &__title
+      &::after
+        width: 20%
+        right: -145px
+      &::before
+        width: 20%
+        left: -145px
   .hero
     &__navigation
       &__logo
         display: none
       &__navbar 
         margin: auto
+@media screen and ( max-width: 1150px )
+  .services
+    &__next
+      bottom: 0 !important
+    &__prev
+      bottom: 0 !important
+  .swiper
+    &-button
+      &-next
+        bottom: 100px
+      &-prev
+        bottom: 100px
 @media screen and ( max-width: 1148px )
   .product
     &__position
@@ -64,7 +92,7 @@
         display: none
 @media screen and ( max-width: 1036px )
   .forms
-    &__header
+    &__title
       &::before
         display: none
       &::after
@@ -112,8 +140,16 @@
     &__rows
       flex-direction: column
       align-items: center
+      &__recommendation
+        margin-left: 0
+        margin-right: 0
     &__information
       width: 100% !important
+      margin-left: 0
+    &__about
+      margin-right: 0
+    &__subrows
+      margin-top: 24px
   .fotorama
     margin-bottom: 30px
     width: 100% !important
@@ -150,6 +186,7 @@
       
   .swiper
     &-text
+      margin-top: 30px
       text-align: center
       &::before
         display: none
@@ -265,6 +302,11 @@
     display: none
   .services
     display: none
+  .mobileapp
+    margin-bottom: 0
+  .footer
+    &__down
+      margin-top: 0
 @media screen and ( max-width: 525px )
   .catalog
     &__header
@@ -280,6 +322,9 @@
       &__subtitle
         display: flex
         flex-direction: column
+        align-items: flex-start
+        &__price
+          margin-bottom: 15px
       &__title
         flex-direction: column
   .catalog

@@ -2,19 +2,8 @@
   &__header
     display: flex
     justify-content: center
-    &::before
-      content: ''
-      display: block
-      border: 1px solid $logotext
-      transform: rotate(90deg)
-      margin-right: 78px
-    &::after
-      content: ''
-      display: block
-      border: 1px solid $logotext
-      transform: rotate(90deg)
-      margin-left: 78px
   &__title
+    position: relative
     text-align: center
     padding: 36px 60px
     border: 2px solid $logotext
@@ -24,6 +13,27 @@
     letter-spacing: 0.24px
     line-height: 30px
     font-size: 24px
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 322px
+      height: 3px
+      right: -322px
+      top: 50%
+      background: url('../img/forms/leftline.png') no-repeat center
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 322px
+      height: 3px
+      left: -322px
+      top: 50%
+      transform: rotate(180deg)
+      background: url('../img/forms/leftline.png') no-repeat center
     &__weight
       font-weight: 300
       letter-spacing: 0.24px
