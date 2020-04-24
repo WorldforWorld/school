@@ -5,6 +5,24 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'DINPro-Light';
+  src: url("../fonts/DINPro-Light/DINPro-Light.woff2") format("woff2"), url("../fonts/DINPro-Light/DINPro-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DINPro-Bold';
+  src: url("../fonts/DINPro-Bold/DINPro-Bold.woff2") format("woff2"), url("../fonts/DINPro-Bold/DINPro-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DINPro-Medium';
+  src: url("../fonts/DINPro-Medium/DINPro-Medium.woff2") format("woff2"), url("../fonts/DINPro-Medium/DINPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
 .header {
   background-color: #f8f6f7; }
   .header__informations {
@@ -182,9 +200,8 @@
         margin-right: 35px;
         text-decoration: none;
         color: #202020;
-        font-family: 'DINPro';
+        font-family: 'DINPro-Medium';
         font-size: 17px;
-        font-weight: 600;
         line-height: 30px;
         padding-bottom: 5px;
         height: 35px; }
@@ -266,9 +283,8 @@
 
 .swiper-text {
   color: #202020;
-  font-family: 'DINPro';
+  font-family: 'DINPro-Light';
   font-size: 36px;
-  font-weight: 300;
   line-height: 48px;
   text-transform: uppercase;
   letter-spacing: 0.36px;
@@ -281,9 +297,8 @@
     width: 50px;
     border: 1px solid #cccccc; }
   .swiper-text-weight {
-    font-family: 'DINPro';
+    font-family: 'DINPro-Bold';
     font-size: 36px;
-    font-weight: 700;
     letter-spacing: 0.36px; }
 
 .swiper-buttons {
@@ -358,9 +373,8 @@
   text-align: center;
   padding: 36px 60px;
   border: 2px solid #202020;
-  font-family: 'DINPro';
+  font-family: 'DINPro-Bold';
   color: #202020;
-  font-weight: 700;
   letter-spacing: 0.24px;
   line-height: 30px;
   font-size: 24px; }
@@ -386,7 +400,7 @@
     transform: rotate(180deg);
     background: url("../img/forms/leftline.png") no-repeat center; }
   .forms__title__weight {
-    font-weight: 300;
+    font-family: 'DINPro-Light';
     letter-spacing: 0.24px;
     line-height: 30px; }
     .forms__title__weight::after {
@@ -433,7 +447,7 @@
     text-align: center;
     padding: 13px 27px;
     color: #202020;
-    font-family: 'DINPro';
+    font-family: 'DINPro-Medium';
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
@@ -514,10 +528,9 @@
         width: 20px; }
   .categories__more {
     color: #202020;
-    font-family: 'DINPro';
+    font-family: 'DINPro-Medium';
     font-size: 14px;
     line-height: 48px;
-    font-weight: 500;
     letter-spacing: 0.14px;
     display: flex;
     margin: auto;
@@ -564,9 +577,8 @@
         text-decoration: none; }
     .popgoods__rows__card__subtitle {
       margin-top: 5px;
-      font-family: 'DINPro';
-      font-size: 14px;
-      font-weight: 300; }
+      font-family: 'DINPro-Light';
+      font-size: 14px; }
       .popgoods__rows__card__subtitle a {
         color: #919191;
         text-decoration: none; }
@@ -601,7 +613,7 @@
         line-height: 24px; }
 
 .popgoods__more {
-  max-width: 183px; }
+  max-width: 185px; }
 
 .timer {
   margin-top: 30px;
@@ -637,14 +649,13 @@
     .timer__circle__name {
       display: inline-block;
       color: #202020;
-      font-family: 'DINPro';
+      font-family: 'DINPro-Light';
       font-size: 30px;
-      font-weight: 300;
       line-height: 40px; }
     .timer__circle__number {
       display: inline-block;
       color: #f47920;
-      font-family: 'DINPro';
+      font-family: 'DINPro-Bold';
       font-size: 72px;
       font-weight: 700; }
   .timer__subcircle {
@@ -769,6 +780,7 @@
       line-height: 84px;
       margin-bottom: 13px; }
   .mobileapp__more {
+    font-family: 'DINPro-Bold';
     color: #ffffff;
     border-color: #ffffff;
     margin: 0;
@@ -814,9 +826,8 @@
 .services__subtitle {
   margin-top: 5px;
   color: #919191;
-  font-family: 'DINPro';
+  font-family: 'DINPro-Light';
   font-size: 14px;
-  font-weight: 300;
   text-decoration: none; }
 
 .services-image {
@@ -930,9 +941,7 @@
   .footer__more {
     margin: 0;
     color: #202020;
-    font-family: 'DINPro';
     font-size: 14px;
-    font-weight: 500;
     line-height: 48px; }
     .footer__more::after {
       transform: rotate(0deg); }
@@ -1111,6 +1120,8 @@
       font-weight: 400;
       line-height: 24px;
       margin-right: 13px; }
+      .product__information__star__title__bold {
+        font-family: 'DINPro-Bold'; }
     .product__information__star__img {
       height: 15px;
       margin-right: 1px; }
@@ -1141,7 +1152,8 @@
           font-size: 16px;
           font-weight: 400;
           line-height: 24px; }
-          .product__information__subtitle__rpice__subtitle b {
+          .product__information__subtitle__rpice__subtitle__bold {
+            font-family: 'DINPro-Bold';
             color: #202020; }
 
 .fotorama__stage {
@@ -1326,6 +1338,8 @@
     font-weight: 400;
     line-height: 24px;
     margin-right: 20px; }
+    .product__position__title__bold {
+      font-family: 'DINPro-Bold'; }
   .product__position__wrap {
     display: flex;
     flex-direction: row;
@@ -1447,7 +1461,7 @@
 
 .product__viewed__information__subtitle {
   color: #919191;
-  font-family: 'DINPro';
+  font-family: 'DINPro-Light';
   font-size: 14px;
   font-weight: 300;
   display: block; }
