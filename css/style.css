@@ -163,6 +163,8 @@
       position: absolute;
       top: 30px; }
     .hero__navigation__logo {
+      text-decoration: none;
+      cursor: pointer;
       display: flex;
       flex-direction: row;
       align-items: flex-start; }
@@ -279,6 +281,8 @@
     width: 50px;
     border: 1px solid #cccccc; }
   .swiper-text-weight {
+    font-family: 'DINPro';
+    font-size: 36px;
     font-weight: 700;
     letter-spacing: 0.36px; }
 
@@ -883,7 +887,6 @@
       line-height: 30px;
       letter-spacing: 0.18px; }
     .footer__app__image {
-      margin-bottom: 30px;
       cursor: pointer;
       width: 176px; }
   .footer__list {
@@ -964,12 +967,14 @@
     flex-direction: row;
     justify-content: space-between; }
     .catalog__header__limb__title, .catalog__header__limb__subtitle {
+      text-decoration: none;
       color: #202020;
       font-family: 'DINPro';
       font-size: 16px;
       font-weight: 300;
       line-height: 24px; }
     .catalog__header__limb__subtitle {
+      text-decoration: none;
       color: #919191;
       border-left: 1px solid #919191;
       padding-left: 10px;
@@ -1845,12 +1850,13 @@ template {
 
 @media screen and (max-width: 1303px) {
   .product__manipulations__wrap {
-    align-items: center; }
+    align-items: flex-start;
+    flex-direction: column; }
   .product__manipulations__button {
     margin-top: 10px; }
     .product__manipulations__button__left {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: row; } }
 
 @media screen and (max-width: 1171px) {
   .mobileapp__text__title {
@@ -1900,6 +1906,14 @@ template {
     display: none; } }
 
 @media screen and (max-width: 992px) {
+  .product__deliverymethod__nav label:hover, .product__manipulations__button:hover, .catalog__navigation__button__down:hover, .categories__rows__button:hover, .categories__more:hover, .footer__social a:hover, .footer__list a:hover, .footer__phone:hover, .footer__contacts__sales:hover, .forms__information a:hover, .header__list__goin:hover, .header__network__list:hover, .hero__contacts a:hover, .hero__navigation__navbar a:hover, .swiper-text-buttons:hover, .swiper-text-buttons::after:hover, .services__title:hover {
+    display: none; }
+  .discount__rows__card__image:hover .discount__rows__card__heart {
+    display: none; }
+  .discount__rows__card__image:hover .discount__rows__card__more {
+    display: none; }
+  .discount__rows__card__image:hover .discount__rows__card__shadow {
+    display: none; }
   .footer__list {
     display: none; } }
 

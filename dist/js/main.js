@@ -11,27 +11,24 @@ var swiper1 = new Swiper('.brand__swiper__container', {
   },
 });
 // Слайдер сервисы платформ
-var appendNumber = 4;
-var prependNumber = 1;
-var swiper = new Swiper('.services__container', {
-  slidesPerView: 3,
-  centeredSlides: true,
-  spaceBetween: 30,
+// var appendNumber = 4;
+// var prependNumber = 1;
+var swiper2 = new Swiper('.services__container', {
+  slidesPerView: 'auto',
+  // slidesPerGroupSkip: 1,
+  slidesPerGroup: 1,
+  updateOnWindowResize: true,
+  setWrapperSize: true,
+  // shortSwipes: false,
+  // centerInsufficientSlides: true,
+  // loopFillGroupWithBlank: true,
+  // watchSlidesVisibility: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
-var swiper = new Swiper('.services__container__catalog', {
-  slidesPerView: 3,
-  centeredSlides: true,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
+swiper2.init();
 // Способ доставки
 var curr = $('.product__deliverymethod__first');
 $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {

@@ -35,12 +35,13 @@
   .product
     &__manipulations
       &__wrap
-        align-items: center
+        align-items: flex-start
+        flex-direction: column
       &__button
         margin-top: 10px
         &__left
           display: flex
-          flex-direction: column
+          flex-direction: row
 @media screen and ( max-width: 1171px )
   .mobileapp
     &__text
@@ -98,6 +99,16 @@
       &::after
         display: none
 @media screen and ( max-width: 992px )
+  .product__deliverymethod__nav label, .product__manipulations__button, .catalog__navigation__button__down, .categories__rows__button, .categories__more, .footer__social a, .footer__list a, .footer__phone, .footer__contacts__sales, .forms__information a , .header__list__goin, .header__network__list, .hero__contacts a, .hero__navigation__navbar a, .swiper-text-buttons, .swiper-text-buttons::after, .services__title
+    &:hover
+      display: none
+  .discount__rows__card__image
+    &:hover .discount__rows__card__heart
+      display: none
+    &:hover .discount__rows__card__more
+      display: none
+    &:hover .discount__rows__card__shadow
+      display: none
   .footer
     &__list
       display: none
