@@ -5,8 +5,6 @@
     flex-direction: column
     margin-bottom: 45px
     & a
-      &:hover .hero__contacts__image svg
-        fill: $logotext
         
     &__image
       margin-top: 17px
@@ -111,8 +109,6 @@
             position: absolute
             right: -16px
             transform: rotate(90deg)
-        &:hover
-          border-bottom: 1px solid $orange
   &__flag
     margin-left: 12px
     display: flex
@@ -221,13 +217,10 @@
       top: 91px
       left: 0
       background: $borderline
-    &:hover
-      background-color: $borderline
     &::after
       content: '\003E'
       color: $light
       margin-left: 9px
-      &:hover
   &-slide 
     display: flex
     // justify-content: space-between
