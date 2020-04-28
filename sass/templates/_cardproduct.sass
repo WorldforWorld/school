@@ -4,7 +4,7 @@
     margin-top: 31px
     margin-bottom: 77px
   &__rows
-    margin-top: 60px
+    margin-top: 50px
     display: flex
     flex-direction: row
   &__header
@@ -30,13 +30,15 @@
         display: flex
         align-self: flex-start
   &__information
-    margin-left: 32px
+    margin-left: 43px
+    margin-top: -17px
     &__title
       display: flex
       flex-direction: row
       justify-content: space-between
       border-bottom: 1px solid $line
       padding-bottom: 20px
+      align-items: center
     &__puma
       color: $logotext
       font-family: 'DINPro'
@@ -44,6 +46,7 @@
       font-weight: 700
       line-height: 24px
     &__star
+      margin-right: 13px
       &__title
         color: $formcolor
         font-family: 'DINPro'
@@ -63,7 +66,7 @@
       align-items: center
       padding-bottom: 35px
       margin-bottom: 30px
-      padding-top: 35px
+      padding-top: 21px
       border-bottom: 1px dashed $line
       &__rpice
         display: flex
@@ -86,18 +89,34 @@
           &__bold
             font-family: 'DINPro-Bold'
             color: $logotext
+      &__img
+        margin-right: 10px
 .fotorama
+  &__active
+    border: 2px solid $orange
+    & > .fotorama__thumb > img
+      border: none !important
   &__stage
     margin-bottom: 30px
     &__frame
+      border: none
   &__img
     border: 1px solid $line !important
   &__thumb
+    & img
+      width: 87px !important
+      height: 87px !important 
+  &__thumb
     &-border
-      border-color: $orange
+      display: none
   &__nav
+    &__shaft
+      display: flex
+      justify-content: space-between
     &__frame
       margin: 0
+      width: 87px !important
+      height: 87px !important 
  
 
 // Радиокнопка
@@ -368,6 +387,8 @@
         line-height: 48px
         text-decoration: none
   &__viewed
+    margin-right: 54px
+    margin-top: -7px
     &__card
       display: flex
       flex-direction: row

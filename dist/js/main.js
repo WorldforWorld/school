@@ -1,3 +1,28 @@
+var lazyloadImages = document.querySelectorAll("img.lazy");    
+var lazyloadThrottleTimeout;
+function lazyload () {
+  if(lazyloadThrottleTimeout) {
+    clearTimeout(lazyloadThrottleTimeout);
+  }    
+  lazyloadThrottleTimeout = setTimeout(function() {
+      var scrollTop = window.pageYOffset;
+      lazyloadImages.forEach(function(img) {
+          if(img.offsetTop < (window.innerHeight + scrollTop)) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+          }
+      });
+      if(lazyloadImages.length == 0) { 
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+      }
+  }, 20);
+}
+document.addEventListener("scroll", lazyload);
+window.addEventListener("resize", lazyload);
+window.addEventListener("orientationChange", lazyload);
+
 var swiper = new Swiper('.swiper-container', {
   navigation: {
     nextEl: '.swiper-button-next',
@@ -11,18 +36,11 @@ var swiper1 = new Swiper('.brand__swiper__container', {
   },
 });
 // Слайдер сервисы платформ
-// var appendNumber = 4;
-// var prependNumber = 1;
 var swiper2 = new Swiper('.services__container', {
   slidesPerView: 'auto',
-  // slidesPerGroupSkip: 1,
   slidesPerGroup: 1,
   updateOnWindowResize: true,
   setWrapperSize: true,
-  // shortSwipes: false,
-  // centerInsufficientSlides: true,
-  // loopFillGroupWithBlank: true,
-  // watchSlidesVisibility: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -40,14 +58,10 @@ $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {
 var items = $('.list-wrapper .list-item');
     var numItems = items.length;
     var perPage = 15;
-
     items.slice(perPage).hide();
-
     $('#pagination-container').pagination({
       items: 300,
       itemsOnPage: 10,
-      // items: numItems,
-      // itemsOnPage: perPage,
       prevText: "&laquo;",
       nextText: "&raquo;",
       onPageClick: function (pageNumber) {
@@ -56,8 +70,7 @@ var items = $('.list-wrapper .list-item');
         items.hide().slice(showFrom, showTo).show();
       }
     });
-
-// Часы --------------------------------------------------
+// Часы
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = Math.floor((t / 1000) % 60);
@@ -72,32 +85,25 @@ function getTimeRemaining(endtime) {
     'seconds': seconds
   };
 }
- 
 function initializeClock(id, endtime) {
   var clock = document.getElementById(id);
   var daysSpan = clock.querySelector('.days');
   var hoursSpan = clock.querySelector('.hours');
   var minutesSpan = clock.querySelector('.minutes');
   var secondsSpan = clock.querySelector('.seconds');
- 
   function updateClock() {
     var t = getTimeRemaining(endtime);
- 
     daysSpan.innerHTML = t.days;
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
- 
     if (t.total <= 0) {
       clearInterval(timeinterval);
     }
   }
- 
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
 }
- 
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
 initializeClock('countdown', deadline);
-
-console.log('я работаю');
+ 

@@ -99,6 +99,9 @@
       &::after
         display: none
 @media screen and ( min-width: 992px )
+  .popgoods__rows__card__rpicetag__image svg
+    &:hover
+      fill: $orange
   .product__deliverymethod__nav label
     &:hover
       cursor: pointer
@@ -224,6 +227,10 @@
         margin-top: 10px
 
 @media screen and ( max-width: 911px )
+  .header
+    &__network
+      & ul
+        padding-left: 10px
   .product
     &__rows
       flex-direction: column
@@ -294,9 +301,6 @@
     &__manipulations
       &__button
         margin-right: 0
-        &__left
-          & a
-            margin-right: 0
       &__wrap
         flex-direction: column
 @media screen and ( max-width: 836px )
@@ -307,6 +311,9 @@
       flex-direction: column
       width: 100%
 @media screen and ( max-width: 768px )
+  .forms
+    &__title
+      padding: 36px 20px
   .footer
     &__wraps
       display: none
@@ -331,6 +338,7 @@
       justify-content: flex-end
     &__information
       margin-top: 53px
+      margin-right: 17px
 @media screen and ( max-width: 722px )
   .product 
     &__about
@@ -346,7 +354,16 @@
         display: flex
         flex-direction: column
 @media screen and ( max-width: 688px )
+  .forms
+    &__title
+      font-size: 19px
+  #pagination-container
+    justify-content: center
+    margin-right: 0
   .catalog
+    &__number
+      margin-right: 0
+      justify-content: center
     &__list
       flex-direction: column
       align-items: center
@@ -396,6 +413,12 @@
     &__down
       margin-top: 0
 @media screen and ( max-width: 525px )
+  .product
+    &__rows
+      margin-top: 0
+  .popgoods__rows 
+    margin-left: 0
+    margin-right: 0
   .catalog
     &__header
       display: flex
@@ -404,7 +427,31 @@
       &__assort
         &__select
           padding-right: 50px
+@media screen and ( max-width: 498px )
+  .fotorama
+    &__thumb
+      & img
+        width: 67px !important
+        height: 67px !important
+    &__nav 
+      &__frame
+        width: 67px !important
+        height: 67px !important 
+  .product
+    &__manipulations
+      &__wrap
+        align-items: center
+      &__button
+        &__left
+          flex-direction: column
+          & a
+            margin-right: 0
 @media screen and ( max-width: 438px )
+  .fotorama
+    margin-top: -51px
+    &__nav
+      &-wrap
+        margin-top: -50px 
   .product
     &__information
       &__subtitle
@@ -434,3 +481,16 @@
       text-align: center
       &::before
         margin: auto
+@media screen and ( max-width: 367px )
+  .fotorama
+    margin-top: -90px
+    &__thumb
+      & img
+        width: 57px !important
+        height: 57px !important
+    &__nav 
+      &-wrap
+        margin-top: -90px 
+      &__frame
+        width: 57px !important
+        height: 57px !important 
