@@ -11,6 +11,7 @@
 </head>
 <body>
   <!-- Yandex.Metrika counter --> <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62316499, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62316499" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <div id="upbutton"></div>
   <header class="header">
     <div class="header__informations">
       <div class="container">
@@ -68,7 +69,7 @@
               <li class="header__network__list">
                 <a href="#">
                   <div class="header__network__image header__network__image__last">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="553.048px" height="553.048px" viewBox="0 0 553.048 553.048" style="enable-background:new 0 0 553.048 553.048;"
                     xml:space="preserve"><g><g>
                      <path d="M76.774,179.141c-9.529,0-17.614,3.323-24.26,9.969c-6.646,6.646-9.97,14.621-9.97,23.929v142.914
@@ -102,7 +103,7 @@
           </div>
           <div class="header__list__goin">
             <a href="#">
-              <span class="header__list__goin__title">Вход на сайт</span>
+              <span class="header__list__goin__title" data-toggle="modal">Вход на сайт</span>
               <div class="header__list__goin__image">
                 <svg height="512pt" viewBox="-64 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m336 192h-16v-64c0-70.59375-57.40625-128-128-128s-128 57.40625-128 128v64h-16c-26.453125 0-48 21.523438-48 48v224c0 26.476562 21.546875 48 48 48h288c26.453125 0 48-21.523438 48-48v-224c0-26.476562-21.546875-48-48-48zm-229.332031-64c0-47.0625 38.269531-85.332031 85.332031-85.332031s85.332031 38.269531 85.332031 85.332031v64h-170.664062zm0 0"/></svg>
               </div>
@@ -121,7 +122,7 @@
     <div class="container">
       <div class="hero__navigation">
         <a href="index.html" class="hero__navigation__logo">
-          <img src="#" data-src="img/hero/Vector_Smart_Object.png" alt="" class="hero__navigation__logo__image lazy">
+          <img src="img/hero/Vector_Smart_Object.png" alt="" class="hero__navigation__logo__image">
           <div class="hero__navigation__text">
             <h2 class="hero__navigation__title">BMC SALES</h2>
             <span class="hero__navigation__subtitle">партнерская сеть продаж</span>
@@ -129,12 +130,20 @@
         </a>
         <!-- /.hero__navigation__logo -->
         <nav class="hero__navigation__navbar">
-          <a href="#">Объявления</a>
-          <a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html">Каталоги</a>
-          <a href="#">Участники</a>
-          <a href="#">Партнеры</a>
-          <a href="#">О платформе</a>
-          <a href="#">Новости</a>
+          <ul  class="hero__navigation__subnavbar">
+            <li><a href="#"><span>Объявления</span></a></li>
+            <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html"><span>Каталоги</span></a>
+              <ul>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Оптовый каталог</span></a></li>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Розничный каталог</span></a></li>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Народный базар</span></a></li>
+                 </ul>
+               </li>
+            <li><a href="#"><span>Участники</span></a></li>
+            <li><a href="#"><span>Партнеры</span></a></li>
+            <li><a href="#"><span>О платформе</span></a></li>
+            <li><a href="#"><span>Новости</span></a></li>
+          </ul>
           <img src="img/hero/search.svg" alt="" class="hero__navigation__navbar__image">
         </nav>
         <div class="hero__wrap">
@@ -268,7 +277,7 @@
           <!-- /.popgoods__rows__card -->
           <div class="list-item popgoods__rows__card">
             <a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html" class="popgoods__rows__card__image discount__rows__card__image">
-              <img src="#" data-src="img/popgoods/original.png" alt="" class="lazy">
+              <img src="img/popgoods/original.png" alt="">
               <img class="discount__rows__card__heart" src="img/discount/heart.svg" alt="">
               <img class="discount__rows__card__more" src="img/discount/more.svg" alt="">
               <div class="discount__rows__card__shadow"></div>
@@ -277,11 +286,11 @@
               <span class="popgoods__rows__card__title"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Блузка модель 111</a></span>
               <span class="popgoods__rows__card__subtitle"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Женская одежда</a></span>
               <div class="popgoods__rows__card__star">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
               </div>
             </div>
             <div class="popgoods__rows__card__rpicetag">
@@ -294,7 +303,7 @@
           <!-- /.popgoods__rows__card -->
           <div class="list-item popgoods__rows__card">
             <a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html" class="popgoods__rows__card__image discount__rows__card__image">
-              <img src="#" data-src="img/popgoods/small.jpg" alt="" class="lazy">
+              <img src="img/popgoods/small.jpg">
               <img class="discount__rows__card__heart" src="img/discount/heart.svg" alt="">
               <img class="discount__rows__card__more" src="img/discount/more.svg" alt="">
               <div class="discount__rows__card__shadow"></div>
@@ -303,11 +312,11 @@
               <span class="popgoods__rows__card__title"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Пуховик артикул: 2801</a></span>
               <span class="popgoods__rows__card__subtitle"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Пуховики</a></span>
               <div class="popgoods__rows__card__star">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
               </div>
             </div>
             <div class="popgoods__rows__card__rpicetag">
@@ -320,7 +329,7 @@
           <!-- /.popgoods__rows__card -->
           <div class="list-item popgoods__rows__card">
             <a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html" class="popgoods__rows__card__image discount__rows__card__image">
-              <img src="#" data-src="img/popgoods/kicks.png" alt="" class="lazy">
+              <img src="img/popgoods/kicks.png" alt="">
               <img class="discount__rows__card__heart" src="img/discount/heart.svg" alt="">
               <img class="discount__rows__card__more" src="img/discount/more.svg" alt="">
               <div class="discount__rows__card__shadow"></div>
@@ -329,11 +338,11 @@
               <span class="popgoods__rows__card__title"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Обувь Т 452</a></span>
               <span class="popgoods__rows__card__subtitle"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Женская Обувь</a></span>
               <div class="popgoods__rows__card__star">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
               </div>
             </div>
             <div class="popgoods__rows__card__rpicetag">
@@ -346,7 +355,7 @@
           <!-- /.popgoods__rows__card -->
           <div class="list-item popgoods__rows__card">
             <a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html" class="popgoods__rows__card__image discount__rows__card__image">
-              <img src="#" data-src="img/popgoods/schoolbag.png" alt="" class="lazy">
+              <img src="img/popgoods/schoolbag.png" alt="">
               <img class="discount__rows__card__heart" src="img/discount/heart.svg" alt="">
               <img class="discount__rows__card__more" src="img/discount/more.svg" alt="">
               <div class="discount__rows__card__shadow"></div>
@@ -355,11 +364,11 @@
               <span class="popgoods__rows__card__title"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Рюкзак PUMA</a></span>
               <span class="popgoods__rows__card__subtitle"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Рюкзаки</a></span>
               <div class="popgoods__rows__card__star">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
               </div>
             </div>
             <div class="popgoods__rows__card__rpicetag">
@@ -374,7 +383,7 @@
             <a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html" class="popgoods__rows__card__image discount__rows__card__image">
               <span class="discount__rows__card__percent">35%</span>
               <div class="discount__rows__card__element"></div>
-              <img src="#" data-src="img/discount/discount-1.jpg" alt="" class="lazy">
+              <img src="img/discount/discount-1.jpg" alt="">
               <img class="discount__rows__card__heart" src="img/discount/heart.svg" alt="">
               <img class="discount__rows__card__more" src="img/discount/more.svg" alt="">
               <div class="discount__rows__card__shadow"></div>
@@ -383,11 +392,11 @@
               <span class="popgoods__rows__card__title"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Пальто детское</a></span>
               <span class="popgoods__rows__card__subtitle"><a onclick="ym('62316499', 'reachGoal', 'product'); return true;" href="сardproduct.html">Детская одежда</a></span>
               <div class="popgoods__rows__card__star">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
-                <img src="#" data-src="img/popgoods/star2.svg" alt="" class="lazy">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
+                <img src="img/popgoods/star2.svg" alt="">
               </div>
             </div>
             <div class="popgoods__rows__card__rpicetag">
@@ -1713,7 +1722,7 @@
       <div class="services__wraps">
         <!-- Swiper -->
         <div class="services__container swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper swiper-no-swiping">
             <div class="services__slide swiper-slide">
               <img src="#" data-src="img/services/services-1.jpg" alt="services" class="services-image lazy">
                 <a href="http://elib.kdt.kz" class="services__title">Учись с умом с E-Библиотекой</a>
@@ -1766,6 +1775,7 @@
     <!-- /.container -->
   </section>
   <!-- /.services -->
+</main>
   <footer class="footer">
     <div class="container">
       <div class="footer__wraps">
@@ -1811,7 +1821,7 @@
           <span class="footer__app__title">Мобильное приложение</span>
           <a href="https://www.apple.com/ru/ios/app-store/"><img src="#" data-src="img/footer/app-buttons.png" alt="" class="footer__app__image lazy"></a>
           <a href="https://play.google.com/"><img src="#" data-src="img/footer/app-buttons2.png" alt="" class="footer__app__image lazy"></a>
-         <a href="#" class="categories__more popgoods__more footer__more">Ваш профиль</a>
+          <a href="#" class="categories__more popgoods__more footer__more">Ваш профиль</a>
         </div>
         <!-- /.footer__app -->
         <div class="footer__list">
@@ -1854,9 +1864,36 @@
     <!-- /.footer__down -->
   </footer>
   <!-- /.footer -->
-</main>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Введите логин и пароль</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="modal__label label form__label label--light">Логин</label>
+          <input type="tel" name="userPhone" class="input form__input modal__input" id="modal-user-phone" placeholder="Ваш логин:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-email" class="modal__label label form__label label--light">Пароль</label>
+          <input type="password" name="userEmail" class="input form__input modal__input" id="modal-user-email" placeholder="Ваш пароль:">
+        </div>
+        <button class="button button--primary modal__button">Войти</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="message">
+    <div class="message__dialog">
+      <button class="message__close"></button>
+      <span class="message__text">Форма отправлена, мы свяжемся с вами через 10 минут</span>
+      <span class="message__text">Вы можете подписаться на нашу группу в <a href="#">vkontakte</a></span>
+    </div>
+  </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/jquery.simplePagination.js"></script>
 <script src="js/main.js"></script>
 </body>

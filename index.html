@@ -9,13 +9,15 @@
   <title>Школьная форма</title>
 </head>
 <body>
-  <!-- Yandex.Metrika counter --> <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62316499, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62316499" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+  <!-- Yandex.Metrika counter --> <!-- <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62316499, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62316499" style="position:absolute; left:-9999px;" alt="" /></div></noscript> --> <!-- /Yandex.Metrika counter -->
+  
+<div id="upbutton"></div>
 <header class="header">
   <div class="header__informations">
     <div class="container">
       <div class="header__list">
         <div class="header__network">
-          <a href="index.html"><img src="#" data-src="img/header/logo.png" alt="" class="header__logo lazy"></a>
+          <a href="index.html"><img src="img/header/logo.png" alt="" class="header__logo"></a>
           <ul>
             <li class="header__network__list">
               <a href="#">
@@ -101,7 +103,7 @@
         </div>
         <div class="header__list__goin">
           <a href="#">
-            <span class="header__list__goin__title">Вход на сайт</span>
+            <span class="header__list__goin__title" data-toggle="modal">Вход на сайт</span>
             <div class="header__list__goin__image">
               <svg height="512pt" viewBox="-64 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m336 192h-16v-64c0-70.59375-57.40625-128-128-128s-128 57.40625-128 128v64h-16c-26.453125 0-48 21.523438-48 48v224c0 26.476562 21.546875 48 48 48h288c26.453125 0 48-21.523438 48-48v-224c0-26.476562-21.546875-48-48-48zm-229.332031-64c0-47.0625 38.269531-85.332031 85.332031-85.332031s85.332031 38.269531 85.332031 85.332031v64h-170.664062zm0 0"/></svg>
             </div>
@@ -120,7 +122,7 @@
     <div class="container">
       <div class="hero__navigation">
         <a href="index.html" class="hero__navigation__logo">
-          <img src="#" data-src="img/hero/Vector_Smart_Object.png" alt="" class="hero__navigation__logo__image lazy">
+          <img src="img/hero/Vector_Smart_Object.png" alt="" class="hero__navigation__logo__image">
           <div class="hero__navigation__text">
             <h2 class="hero__navigation__title">BMC SALES</h2>
             <span class="hero__navigation__subtitle">партнерская сеть продаж</span>
@@ -128,12 +130,20 @@
         </a>
         <!-- /.hero__navigation__logo -->
         <nav class="hero__navigation__navbar">
-          <a href="#">Объявления</a>
-          <a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html">Каталоги</a>
-          <a href="#">Участники</a>
-          <a href="#">Партнеры</a>
-          <a href="#">О платформе</a>
-          <a href="#">Новости</a>
+          <ul  class="hero__navigation__subnavbar">
+            <li><a href="#"><span>Объявления</span></a></li>
+            <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html"><span>Каталоги</span></a>
+              <ul>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Оптовый каталог</span></a></li>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Розничный каталог</span></a></li>
+               <li><a onclick="ym('62316499', 'reachGoal', 'button'); return true;" href="catalog.html" class="hero__navigation__subnavbar__title"><span>Народный базар</span></a></li>
+                 </ul>
+               </li>
+            <li><a href="#"><span>Участники</span></a></li>
+            <li><a href="#"><span>Партнеры</span></a></li>
+            <li><a href="#"><span>О платформе</span></a></li>
+            <li><a href="#"><span>Новости</span></a></li>
+          </ul>
           <img src="img/hero/search.svg" alt="" class="hero__navigation__navbar__image">
         </nav>
         <div class="hero__wrap">
@@ -161,7 +171,7 @@
                 <!-- hero__brand -->
                 <div class="hero__brand">
                   <div class="hero__brand__image">
-                    <img src="#" data-src="img/hero/hero-bg.png" alt="hero-bg" class="lazy">
+                    <img src="img/hero/hero-bg.png" alt="hero-bg">
                   </div>
                   <div class="hero__brand__text">
                     <span class="hero__brand__title">Комплект школьной формы
@@ -179,7 +189,7 @@
                 <!-- hero__brand -->
                 <div class="hero__brand">
                   <div class="hero__brand__image">
-                    <img src="#" data-src="img/hero/hero-bg.png" alt="hero-bg" class="lazy">
+                    <img src="img/hero/hero-bg.png" alt="hero-bg">
                   </div>
                   <div class="hero__brand__text">
                     <span class="hero__brand__title">Комплект школьной формы
@@ -197,7 +207,7 @@
                 <!-- hero__brand -->
                 <div class="hero__brand">
                   <div class="hero__brand__image">
-                    <img src="#" data-src="img/hero/hero-bg.png" alt="hero-bg" class="lazy">
+                    <img src="img/hero/hero-bg.png" alt="hero-bg">
                   </div>
                   <div class="hero__brand__text">
                     <span class="hero__brand__title">Комплект школьной формы
@@ -263,7 +273,7 @@
       </div>
       <div class="forms__rows">
         <div class="forms__card">
-          <img src="#" data-src="img/forms/forms-1.png" alt="forms" class="forms__image lazy">
+          <img src="img/forms/forms-1.png" alt="forms" class="forms__image">
           <div class="forms__information">
             <span class="forms__information__title">Популярные товары</span>
             <span class="forms__information__subtitle">для мальчиков</span>
@@ -272,7 +282,7 @@
         </div>
         <!-- /.forms__card -->
         <div class="forms__card">
-          <img src="#" data-src="img/forms/forms-2.png" alt="forms" class="forms__image lazy">
+          <img src="img/forms/forms-2.png" alt="forms" class="forms__image">
           <div class="forms__information">
             <span class="forms__information__title">Популярные товары</span>
             <span class="forms__information__subtitle">для девочек</span>
@@ -281,7 +291,7 @@
         </div>
         <!-- /.forms__card -->
         <div class="forms__card">
-          <img src="#" data-src="img/forms/forms-3.png" alt="forms" class="forms__image lazy">
+          <img src="img/forms/forms-3.png" alt="forms" class="forms__image">
           <div class="forms__information">
             <span class="forms__information__title">Популярные товары</span>
             <span class="forms__information__subtitle">аксессуары</span>
@@ -671,7 +681,7 @@
       <div class="services__wraps">
         <!-- Swiper -->
         <div class="services__container swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper swiper-no-swiping">
             <div class="services__slide swiper-slide">
               <img src="#" data-src="img/services/services-1.jpg" alt="services" class="services-image lazy">
                 <a href="http://elib.kdt.kz" class="services__title">Учись с умом с E-Библиотекой</a>
@@ -724,6 +734,7 @@
     <!-- /.container -->
   </section>
   <!-- /.services -->
+</main>
   <footer class="footer">
     <div class="container">
       <div class="footer__wraps">
@@ -769,7 +780,7 @@
           <span class="footer__app__title">Мобильное приложение</span>
           <a href="https://www.apple.com/ru/ios/app-store/"><img src="#" data-src="img/footer/app-buttons.png" alt="" class="footer__app__image lazy"></a>
           <a href="https://play.google.com/"><img src="#" data-src="img/footer/app-buttons2.png" alt="" class="footer__app__image lazy"></a>
-         <a href="#" class="categories__more popgoods__more footer__more">Ваш профиль</a>
+          <a href="#" class="categories__more popgoods__more footer__more">Ваш профиль</a>
         </div>
         <!-- /.footer__app -->
         <div class="footer__list">
@@ -812,10 +823,37 @@
     <!-- /.footer__down -->
   </footer>
   <!-- /.footer -->
-</main>
+  <div class="modal">
+    <div class="modal__dialog">
+      <button class="modal__close"></button>
+      <h3 class="modal__title">Введите логин и пароль</h3>
+      <form action="send.php" method="POST" class="form modal__form">
+        <div class="input-group modal__input-group">
+          <label for="modal-user-phone" class="modal__label label form__label label--light">Логин</label>
+          <input type="tel" name="userPhone" class="input form__input modal__input" id="modal-user-phone" placeholder="Ваш логин:">
+        </div>
+        <div class="input-group modal__input-group">
+          <label for="modal-user-email" class="modal__label label form__label label--light">Пароль</label>
+          <input type="password" name="userEmail" class="input form__input modal__input" id="modal-user-email" placeholder="Ваш пароль:">
+        </div>
+        <button class="button button--primary modal__button">Войти</button>
+      </form>
+      <!-- /.form modal__form -->
+    </div>
+    <!-- /.modal__dialog -->
+  </div>
+  <!-- /.modal -->
+  <div class="message">
+    <div class="message__dialog">
+      <button class="message__close"></button>
+      <span class="message__text">Форма отправлена, мы свяжемся с вами через 10 минут</span>
+      <span class="message__text">Вы можете подписаться на нашу группу в <a href="#">vkontakte</a></span>
+    </div>
+  </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="js/jquery.simplePagination.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

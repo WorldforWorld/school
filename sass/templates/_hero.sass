@@ -84,7 +84,40 @@
       &__image
         width: 60px
         height: 60px
+    &__subnavbar
+      display: flex
+      flex-direction: row
+      margin: 0
+      padding: 0
+      & li
+        list-style-type: none
+        &:nth-of-type(2)
+          position: relative
+        &:nth-of-type(2)
+          &::before
+            content: '\003E'
+            color: $orange
+            position: absolute
+            right: 20px
+            transform: rotate(90deg)
+            top: 6px
+        &:hover ul
+          display: block
+        & ul
+          z-index: 99
+          background: $backgrounds
+          display: none
+          position: absolute
+          padding: 0
+          & li 
+            width: 200px
+
+            &:nth-of-type(2)
+              &::before
+                display: none
+
     &__navbar
+      position: relative
       display: flex
       &__image
         width: 16px
@@ -100,15 +133,7 @@
         line-height: 30px
         padding-bottom: 5px
         height: 35px
-        &:nth-of-type(2)
-          position: relative
-        &:nth-of-type(2)
-          &::before
-            content: '\003E'
-            color: $orange
-            position: absolute
-            right: -16px
-            transform: rotate(90deg)
+
   &__flag
     margin-left: 12px
     display: flex
@@ -252,3 +277,4 @@
 .swiper-button-prev.swiper-button-disabled
   background: $light url('../img/hero/arrow-prev.svg') no-repeat center
   background-size: 40%
+

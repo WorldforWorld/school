@@ -1,3 +1,96 @@
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 100) {
+      if ($('#upbutton').is(':hidden')) {
+          $('#upbutton').css({opacity : 1}).fadeIn('slow');
+      }
+  } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+});
+$('#upbutton').click(function() {
+    $('html, body').stop().animate({scrollTop : 0}, 800);
+});
+/* -------------------------------------------------- */
+document.addEventListener("touchstart", function(){}, true);
+var modal = $('.modal'),
+message = $('.message'),
+modalBtn = $('.header__list__goin__title'),
+closelBtn = $('.modal__close'),
+closelMessageBtn = $('.message__close'),
+modalHidden = $('.modal__dialog');
+modalHiddenMessage = $('.message__dialog');
+
+modalBtn.on('click', function () {
+modal.toggleClass('modal--visible');
+});
+closelBtn.on('click', function () {
+modal.toggleClass('modal--visible');
+});
+closelMessageBtn.on('click', function () {
+message.toggleClass('message--visible');
+});
+/* --------------------------------- */
+
+/* --------------------------------- */
+jQuery(function($){
+modal.mouseup(function (e){ // событие клика по веб-документу
+  if (!modalHidden.is(e.target) && modalHidden.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+    modal.toggleClass('modal--visible');// скрываем его
+  }
+});
+message.mouseup(function (e){ // событие клика по веб-документу
+if (!modalHiddenMessage.is(e.target) && modalHiddenMessage.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+  message.toggleClass('message--visible');// скрываем его
+}
+});
+});
+
+/* -------------------------------------------------- */
+// Валидация формы
+$(document).ready(function () {
+$('.modal__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // строчное правило
+    userPhone: {
+      required: true,
+      minlength: 2,
+      maxlength: 15
+    },
+    userEmail: {
+      required: true,
+      minlength: 2,
+      maxlength: 15,
+      email: false
+    },
+  }, // сообщения
+  errorElement: "div",
+  messages: {
+    userPhone: {
+      required:"Заполните поле",
+      minlength: "Логин не короче двух букв"
+    },
+    userEmail: {
+      required: "Заполните поле",
+      minlength: "Пароль не короче двух букв"
+    }
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "send.php",
+      data: $(form).serialize(),
+      success: function (response) {
+        message.toggleClass('message--visible');
+        $(form)[0].reset();
+        modal.removeClass('modal--visible');
+      },
+      error: function (response) {
+        console.error('Ошибка запроса ' + response);
+      }
+    });
+  }
+});
+});
+/* -------------------------------------------------- */
 var lazyloadImages = document.querySelectorAll("img.lazy");    
 var lazyloadThrottleTimeout;
 function lazyload () {
@@ -106,4 +199,5 @@ function initializeClock(id, endtime) {
 }
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
 initializeClock('countdown', deadline);
+
  

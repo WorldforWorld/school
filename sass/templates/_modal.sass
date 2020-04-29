@@ -1,0 +1,87 @@
+.modal
+  &__input
+    outline: none
+  &__label
+    color: rgba($light, 0.5)
+    font-size: 18px
+    font-family:  'DINPro-Light'
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($black, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  &--visible
+    opacity: 1
+    visibility: visible
+    z-index: 99999999999999
+  &__dialog
+    margin: 10px
+    position: relative
+    max-width: 36.36rem
+    background: $orange
+    padding: 2.357rem 3.5rem 1.928rem
+    color: $light
+  &__close
+    outline: none
+    position: absolute
+    right: 0
+    top: 0
+    width: 28px
+    height: 28px
+    background: transparent url('../img/close.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+  &__title
+    font-family:  'DINPro-Light'
+    font-weight: normal
+    line-height: 26px
+    font-size: 1.357rem
+    text-align: center
+    margin: 0
+    margin-bottom: 2rem
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    &-group
+      position: relative
+      display: flex
+      flex-direction: column
+      margin-bottom: 3.185rem
+    &:last-of-type
+      margin-bottom: 0.1rem
+  &__policy
+    margin-bottom: 2.7rem
+  &__button
+    color: $logotext
+    border: none
+    font-size: 18px
+    font-family:  'DINPro-Light'
+    padding: 10px
+    cursor: pointer
+#modal
+  &-user
+    &-name
+      &::placeholder
+        color: $light
+    &-phone
+      &::placeholder
+        color: $light
+    &-email
+      &::placeholder
+        color: $light
+div.invalid 
+  font-family: 'DINPro-Light'
+  color: $light
+  position: absolute
+  margin-top: 55px !important

@@ -59,7 +59,8 @@
   .header__network {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    margin-top: 5px; }
     .header__network ul {
       display: flex;
       flex-direction: row;
@@ -97,6 +98,17 @@
         .header__network__image__last svg {
           height: 20px;
           width: 20px; }
+
+#upbutton {
+  background: url("../img/up.png") no-repeat top left;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 999; }
 
 .hero {
   background: #f8f6f7; }
@@ -180,7 +192,36 @@
       .hero__navigation__logo__image {
         width: 60px;
         height: 60px; }
+    .hero__navigation__subnavbar {
+      display: flex;
+      flex-direction: row;
+      margin: 0;
+      padding: 0; }
+      .hero__navigation__subnavbar li {
+        list-style-type: none; }
+        .hero__navigation__subnavbar li:nth-of-type(2) {
+          position: relative; }
+        .hero__navigation__subnavbar li:nth-of-type(2)::before {
+          content: '\003E';
+          color: #f47920;
+          position: absolute;
+          right: 20px;
+          transform: rotate(90deg);
+          top: 6px; }
+        .hero__navigation__subnavbar li:hover ul {
+          display: block; }
+        .hero__navigation__subnavbar li ul {
+          z-index: 99;
+          background: #f8f6f7;
+          display: none;
+          position: absolute;
+          padding: 0; }
+          .hero__navigation__subnavbar li ul li {
+            width: 200px; }
+            .hero__navigation__subnavbar li ul li:nth-of-type(2)::before {
+              display: none; }
     .hero__navigation__navbar {
+      position: relative;
       display: flex; }
       .hero__navigation__navbar__image {
         width: 16px;
@@ -196,14 +237,6 @@
         line-height: 30px;
         padding-bottom: 5px;
         height: 35px; }
-        .hero__navigation__navbar a:nth-of-type(2) {
-          position: relative; }
-        .hero__navigation__navbar a:nth-of-type(2)::before {
-          content: '\003E';
-          color: #f47920;
-          position: absolute;
-          right: -16px;
-          transform: rotate(90deg); }
   .hero__flag {
     margin-left: 12px;
     display: flex;
@@ -582,7 +615,8 @@
         margin-right: 20px;
         height: 24px;
         width: 24px;
-        cursor: pointer; }
+        cursor: pointer;
+        fill: #919191; }
       .popgoods__rows__card__rpicetag__list {
         display: inline-block;
         padding-top: 25px;
@@ -1472,6 +1506,178 @@
 .product__categories__header::before {
   width: 30%; }
 
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__input {
+    outline: none; }
+  .modal__label {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    font-family: 'DINPro-Light'; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999999999999; }
+  .modal__dialog {
+    margin: 10px;
+    position: relative;
+    max-width: 36.36rem;
+    background: #f47920;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modal__close {
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'DINPro-Light';
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 1.357rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3.185rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 0.1rem; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    color: #202020;
+    border: none;
+    font-size: 18px;
+    font-family: 'DINPro-Light';
+    padding: 10px;
+    cursor: pointer; }
+
+#modal-user-name::-webkit-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-name::-moz-placeholder {
+  color: #ffffff; }
+
+#modal-user-name:-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-name::-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-name::placeholder {
+  color: #ffffff; }
+
+#modal-user-phone::-webkit-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-phone::-moz-placeholder {
+  color: #ffffff; }
+
+#modal-user-phone:-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-phone::-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-phone::placeholder {
+  color: #ffffff; }
+
+#modal-user-email::-webkit-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-email::-moz-placeholder {
+  color: #ffffff; }
+
+#modal-user-email:-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-email::-ms-input-placeholder {
+  color: #ffffff; }
+
+#modal-user-email::placeholder {
+  color: #ffffff; }
+
+div.invalid {
+  font-family: 'DINPro-Light';
+  color: #ffffff;
+  position: absolute;
+  margin-top: 55px !important; }
+
+.message {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .message--visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999; }
+  .message__dialog {
+    margin: 10px;
+    position: relative;
+    max-width: 37rem;
+    background: #f47920;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .message__close {
+    outline: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .message__text {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'DINPro-Light';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px; }
+    .message__text a {
+      color: #202020;
+      text-transform: uppercase; }
+
 .list-wrapper {
   overflow: hidden; }
 
@@ -1917,7 +2123,7 @@ template {
 
 @media screen and (min-width: 992px) {
   .popgoods__rows__card__rpicetag__image svg:hover {
-    fill: #f47920; }
+    fill: #000000; }
   .product__deliverymethod__nav label:hover {
     cursor: pointer; }
   .product__manipulations__button:hover {
@@ -1975,6 +2181,8 @@ template {
     color: #f47920; } }
 
 @media screen and (max-width: 992px) {
+  .header__network ul {
+    padding-left: 10px; }
   .footer__list {
     display: none; } }
 
@@ -1995,6 +2203,10 @@ template {
     display: none; }
   .timer__space img {
     margin: auto; } }
+
+@media screen and (max-width: 954px) {
+  .header__network ul {
+    padding-left: 10px; } }
 
 @media screen and (max-width: 951px) {
   .header__network__image__last {
@@ -2031,13 +2243,14 @@ template {
 
 @media screen and (max-width: 888px) {
   .header__network {
-    padding-top: 10px;
+    padding-top: 16px;
     justify-content: center;
     margin: auto; }
     .header__network__list {
       display: none; }
   .header__list__goin {
-    margin: auto; }
+    margin: auto;
+    margin-top: 18px; }
   .hero__slide {
     justify-content: center; }
   .hero__brand {
@@ -2087,6 +2300,8 @@ template {
     display: none; } }
 
 @media screen and (max-width: 761px) {
+  .hero__navigation__subnavbar li:nth-of-type(2)::before {
+    right: 9px; }
   .hero__navigation__navbar a {
     margin-right: 17px; } }
 
@@ -2219,6 +2434,9 @@ template {
       margin: auto; } }
 
 @media screen and (max-width: 367px) {
+  .product__position__wrap {
+    flex-direction: column;
+    align-items: center; }
   .fotorama {
     margin-top: -90px; }
     .fotorama__thumb img {

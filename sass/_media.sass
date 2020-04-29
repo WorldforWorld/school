@@ -99,9 +99,10 @@
       &::after
         display: none
 @media screen and ( min-width: 992px )
+
   .popgoods__rows__card__rpicetag__image svg
     &:hover
-      fill: $orange
+      fill: $black
   .product__deliverymethod__nav label
     &:hover
       cursor: pointer
@@ -189,6 +190,10 @@
     &:hover
       color: $orange
 @media screen and ( max-width: 992px )
+  .header
+    &__network
+      & ul
+        padding-left: 10px
   .footer
     &__list
       display: none
@@ -213,6 +218,11 @@
       & img
         margin: auto
         
+@media screen and ( max-width: 954px )
+  .header
+    &__network
+      & ul
+        padding-left: 10px
 @media screen and ( max-width: 951px )
   .header
     &__network
@@ -257,7 +267,7 @@
 @media screen and ( max-width: 888px )
   .header
     &__network
-      padding-top: 10px
+      padding-top: 16px
       justify-content: center
       margin: auto
       &__list
@@ -266,6 +276,7 @@
     &__list
       &__goin 
         margin: auto
+        margin-top: 18px
   .hero
     &__slide
       justify-content: center
@@ -322,6 +333,8 @@
   .timer
     display: none
 @media screen and ( max-width: 761px )
+  .hero__navigation__subnavbar li:nth-of-type(2)::before
+    right: 9px
   .hero
     &__navigation
       &__navbar
@@ -482,6 +495,11 @@
       &::before
         margin: auto
 @media screen and ( max-width: 367px )
+  .product
+    &__position
+      &__wrap
+        flex-direction: column
+        align-items: center
   .fotorama
     margin-top: -90px
     &__thumb
