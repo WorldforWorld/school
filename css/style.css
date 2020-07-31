@@ -1577,9 +1577,6 @@
     padding: 10px;
     cursor: pointer; }
 
-#modal-user-name::-webkit-input-placeholder {
-  color: #ffffff; }
-
 #modal-user-name::-moz-placeholder {
   color: #ffffff; }
 
@@ -1592,9 +1589,6 @@
 #modal-user-name::placeholder {
   color: #ffffff; }
 
-#modal-user-phone::-webkit-input-placeholder {
-  color: #ffffff; }
-
 #modal-user-phone::-moz-placeholder {
   color: #ffffff; }
 
@@ -1605,9 +1599,6 @@
   color: #ffffff; }
 
 #modal-user-phone::placeholder {
-  color: #ffffff; }
-
-#modal-user-email::-webkit-input-placeholder {
   color: #ffffff; }
 
 #modal-user-email::-moz-placeholder {
