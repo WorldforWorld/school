@@ -1,0 +1,33 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorldforWorld/school.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WorldforWorld/school/issues"
+  },
+  "homepage": "https://github.com/WorldforWorld/school#readme",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "latest",
+    "gulp-minify": "latest",
+    "gulp-sass": "latest",
+    "sass": "latest"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "latest",
+    "gulp-tinypng-compress": "latest"
+  }
+}
