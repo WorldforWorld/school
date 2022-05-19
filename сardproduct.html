@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <title>Школьная форма</title>
 </head>
 <body>
-    <!-- Yandex.Metrika counter --> <script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62316499, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62316499" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <!-- Yandex.Metrika counter --> <!--<script > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(62316499, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/62316499" style="position:absolute; left:-9999px;" alt="" /></div></noscript>--> <!-- /Yandex.Metrika counter -->
 <div id="upbutton"></div>
   <header class="header">
     <div class="header__informations">
@@ -367,11 +366,11 @@
             </div>
             <div class="product__about__wraps">
               <span class="product__about__title">Email:</span>
-              <span class="product__about__subtitle">mekorma@mail.ru</span>
+              <span class="product__about__subtitle"><a href="mailto:#">mekorma@mail.ru</a></span>
             </div>
             <div class="product__about__wraps">
               <span class="product__about__title">Телефон:</span>
-              <span class="product__about__subtitle">+7-999-999-99999</span>
+              <span class="product__about__subtitle"><a href="tel:#">+7-999-999-99999</a></span>
             </div>
           </div>
           
@@ -383,13 +382,13 @@
               <span class="product__about__title">Другие товары этого продавца на сайтах:</span>
             </div>
             <div class="product__about__wraps">
-              <span class="product__about__title">mangilik.mektepforma.kz</span>
+              <span class="product__about__title"><a href="#">mangilik.mektepforma.kz</a></span>
             </div>
             <div class="product__about__wraps">
-              <span class="product__about__title">petropavl.mektepforma.kz</span>
+              <span class="product__about__title"><a href="#">petropavl.mektepforma.kz</a></span>
             </div>
             <div class="product__about__wraps">
-              <span class="product__about__title">shymkent.mektepforma.kz</span>
+              <span class="product__about__title"><a href="#">shymkent.mektepforma.kz</a></span>
             </div>
           </div>
         </div>
@@ -459,7 +458,7 @@
       </div>
       <div class="popgoods__rows product__rows__recommendation">
         <!-- Swiper -->
-        <div class="popgoods__container services__container swiper-container">
+        <div class="popgoods__container services__container--one swiper-container">
           <div class="swiper-wrapper swiper-no-swiping">
             <div class="services__slide swiper-slide">
               <div class="popgoods__rows__card">
@@ -1014,15 +1013,15 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
-  <div class="message">
+  <div class="message message--visible">
     <div class="message__dialog">
       <button class="message__close"></button>
       <span class="message__text">Форма отправлена, мы свяжемся с вами через 10 минут</span>
       <span class="message__text">Вы можете подписаться на нашу группу в <a href="#">vkontakte</a></span>
     </div>
   </div>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>

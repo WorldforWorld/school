@@ -129,7 +129,7 @@ var swiper1 = new Swiper('.brand__swiper__container', {
   },
 });
 // Слайдер сервисы платформ
-var swiper2 = new Swiper('.services__container', {
+var swiper22 = new Swiper('.services__container', {
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   updateOnWindowResize: true,
@@ -139,7 +139,19 @@ var swiper2 = new Swiper('.services__container', {
     prevEl: '.swiper-button-prev',
   },
 });
-swiper2.init();
+swiper22.init();
+// Слайдер вам так же могут понадобиться
+var swiper23 = new Swiper('.services__container--one', {
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  updateOnWindowResize: true,
+  setWrapperSize: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+swiper23.init();
 // Способ доставки
 var curr = $('.product__deliverymethod__first');
 $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {
@@ -148,21 +160,23 @@ $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {
   curr.show();
 });
 // Пагинация
-var items = $('.list-wrapper .list-item');
-    var numItems = items.length;
-    var perPage = 15;
-    items.slice(perPage).hide();
-    $('#pagination-container').pagination({
-      items: 300,
-      itemsOnPage: 10,
-      prevText: "&laquo;",
-      nextText: "&raquo;",
-      onPageClick: function (pageNumber) {
-        var showFrom = perPage * (pageNumber - 1);
-        var showTo = showFrom + perPage;
-        items.hide().slice(showFrom, showTo).show();
-      }
-    });
+if($( '.catalog__rows' ).hasClass( 'popgoods__rows' )) {
+  var items = $('.list-wrapper .list-item');
+  var numItems = items.length;
+  var perPage = 15;
+  items.slice(perPage).hide();
+  $('#pagination-container').pagination({
+    items: 300,
+    itemsOnPage: 10,
+    prevText: "&laquo;",
+    nextText: "&raquo;",
+    onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    }
+  });
+}
 // Часы
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -198,6 +212,8 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+if($( '#countdown' ).hasClass( 'timer__wraps' )) {
 initializeClock('countdown', deadline);
+}
 
  
