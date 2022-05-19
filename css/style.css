@@ -2496,36 +2496,40 @@ button.swiper-pagination-bullet {
   font-family: "DINPro-Light";
   padding: 10px;
   cursor: pointer;
+  transition: 0.25s;
+}
+.modal__button:hover {
+  background: #cccccc;
 }
 
 #modal-user-name::-moz-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 
 #modal-user-name:-ms-input-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 
 #modal-user-name::placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-phone::-moz-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-phone:-ms-input-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-phone::placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-email::-moz-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-email:-ms-input-placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 #modal-user-email::placeholder {
-  color: #ffffff;
+  color: #f47920;
 }
 
 div.invalid {
@@ -2535,6 +2539,7 @@ div.invalid {
   margin-top: 55px !important;
 }
 
+.error,
 .message {
   opacity: 0;
   visibility: hidden;
@@ -2551,11 +2556,13 @@ div.invalid {
   align-items: center;
   justify-content: center;
 }
+.error--visible,
 .message--visible {
   opacity: 1;
   visibility: visible;
   z-index: 9999;
 }
+.error__dialog,
 .message__dialog {
   margin: 10px;
   position: relative;
@@ -2564,6 +2571,7 @@ div.invalid {
   padding: 2.357rem 3.5rem 1.928rem;
   color: #ffffff;
 }
+.error__close,
 .message__close {
   outline: none;
   position: absolute;
@@ -2576,6 +2584,7 @@ div.invalid {
   margin: 12px;
   cursor: pointer;
 }
+.error__text,
 .message__text {
   display: inline-block;
   width: 100%;
@@ -2586,6 +2595,7 @@ div.invalid {
   font-size: 14px;
   line-height: 26px;
 }
+.error__text a,
 .message__text a {
   color: #202020;
   text-transform: uppercase;

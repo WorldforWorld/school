@@ -69,17 +69,20 @@
     font-family:  'DINPro-Light'
     padding: 10px
     cursor: pointer
+    transition: 0.25s
+    &:hover
+      background: $borderline
 #modal
   &-user
     &-name
       &::placeholder
-        color: $light
+        color: $orange
     &-phone
       &::placeholder
-        color: $light
+        color: $orange
     &-email
       &::placeholder
-        color: $light
+        color: $orange
 div.invalid 
   font-family: 'DINPro-Light'
   color: $light
