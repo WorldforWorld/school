@@ -12,11 +12,14 @@ $('#upbutton').click(function() {
 document.addEventListener("touchstart", function(){}, true);
 var modal = $('.modal'),
 message = $('.message'),
+error = $('.error'),
 modalBtn = $('.header__list__goin__title'),
 closelBtn = $('.modal__close'),
 closelMessageBtn = $('.message__close'),
+closelErrorBtn = $('.error__close'),
 modalHidden = $('.modal__dialog');
 modalHiddenMessage = $('.message__dialog');
+modalHiddenError = $('.error__dialog');
 
 modalBtn.on('click', function () {
 modal.toggleClass('modal--visible');
@@ -27,20 +30,28 @@ modal.toggleClass('modal--visible');
 closelMessageBtn.on('click', function () {
 message.toggleClass('message--visible');
 });
+closelErrorBtn.on('click', function () {
+  error.toggleClass('error--visible');
+});
 /* --------------------------------- */
 
 /* --------------------------------- */
 jQuery(function($){
-modal.mouseup(function (e){ // событие клика по веб-документу
-  if (!modalHidden.is(e.target) && modalHidden.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
-    modal.toggleClass('modal--visible');// скрываем его
-  }
-});
-message.mouseup(function (e){ // событие клика по веб-документу
-if (!modalHiddenMessage.is(e.target) && modalHiddenMessage.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
-  message.toggleClass('message--visible');// скрываем его
-}
-});
+  modal.mouseup(function (e){ // событие клика по веб-документу
+    if (!modalHidden.is(e.target) && modalHidden.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+      modal.toggleClass('modal--visible');// скрываем его
+    }
+  });
+  message.mouseup(function (e){ // событие клика по веб-документу
+    if (!modalHiddenMessage.is(e.target) && modalHiddenMessage.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+      message.toggleClass('message--visible');// скрываем его
+    }
+  });
+  error.mouseup(function (e){ // событие клика по веб-документу
+    if (!modalHiddenError.is(e.target) && modalHiddenError.has(e.target).length === 0) { //если клик был не по нашему блоку и не по его дочерним элементам
+      error.toggleClass('error--visible');// скрываем его
+    }
+  });
 });
 
 /* -------------------------------------------------- */
@@ -57,7 +68,7 @@ $('.modal__form').validate({
     },
     userEmail: {
       required: true,
-      minlength: 2,
+      minlength: 6,
       maxlength: 15,
       email: false
     },
@@ -70,7 +81,7 @@ $('.modal__form').validate({
     },
     userEmail: {
       required: "Заполните поле",
-      minlength: "Пароль не короче двух букв"
+      minlength: "Пароль не короче шести символов"
     }
   },
   submitHandler: function(form) {
@@ -80,10 +91,15 @@ $('.modal__form').validate({
       data: $(form).serialize(),
       success: function (response) {
         message.toggleClass('message--visible');
+        let nameMessage = $('.message__text');
+        nameMessage.text(nameMessage.text() + ', ' +  $('#modal-user-phone').val());
         $(form)[0].reset();
         modal.removeClass('modal--visible');
       },
       error: function (response) {
+        modal.removeClass('modal--visible');
+        error.toggleClass('error--visible');
+        $(form)[0].reset();
         console.error('Ошибка запроса ' + response);
       }
     });
@@ -129,7 +145,7 @@ var swiper1 = new Swiper('.brand__swiper__container', {
   },
 });
 // Слайдер сервисы платформ
-var swiper2 = new Swiper('.services__container', {
+var swiper22 = new Swiper('.services__container', {
   slidesPerView: 'auto',
   slidesPerGroup: 1,
   updateOnWindowResize: true,
@@ -139,7 +155,19 @@ var swiper2 = new Swiper('.services__container', {
     prevEl: '.swiper-button-prev',
   },
 });
-swiper2.init();
+swiper22.init();
+// Слайдер вам так же могут понадобиться
+var swiper23 = new Swiper('.services__container--one', {
+  slidesPerView: 'auto',
+  slidesPerGroup: 1,
+  updateOnWindowResize: true,
+  setWrapperSize: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+swiper23.init();
 // Способ доставки
 var curr = $('.product__deliverymethod__first');
 $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {
@@ -148,21 +176,23 @@ $('.product__deliverymethod__nav input[type="radio"]').on('change', function() {
   curr.show();
 });
 // Пагинация
-var items = $('.list-wrapper .list-item');
-    var numItems = items.length;
-    var perPage = 15;
-    items.slice(perPage).hide();
-    $('#pagination-container').pagination({
-      items: 300,
-      itemsOnPage: 10,
-      prevText: "&laquo;",
-      nextText: "&raquo;",
-      onPageClick: function (pageNumber) {
-        var showFrom = perPage * (pageNumber - 1);
-        var showTo = showFrom + perPage;
-        items.hide().slice(showFrom, showTo).show();
-      }
-    });
+if($( '.catalog__rows' ).hasClass( 'popgoods__rows' )) {
+  var items = $('.list-wrapper .list-item');
+  var numItems = items.length;
+  var perPage = 15;
+  items.slice(perPage).hide();
+  $('#pagination-container').pagination({
+    items: 300,
+    itemsOnPage: 10,
+    prevText: "&laquo;",
+    nextText: "&raquo;",
+    onPageClick: function (pageNumber) {
+      var showFrom = perPage * (pageNumber - 1);
+      var showTo = showFrom + perPage;
+      items.hide().slice(showFrom, showTo).show();
+    }
+  });
+}
 // Часы
 function getTimeRemaining(endtime) {
   var t = Date.parse(endtime) - Date.parse(new Date());
@@ -198,6 +228,8 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+if($( '#countdown' ).hasClass( 'timer__wraps' )) {
 initializeClock('countdown', deadline);
+}
 
  
