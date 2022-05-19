@@ -128,14 +128,17 @@
     &__rows
       &__card
         &__image
-          &:hover .discount__rows__card__heart
-            display: block
-            cursor: pointer
+          &:hover .discount__rows__card__heart,
           &:hover .discount__rows__card__more
             display: block
             cursor: pointer
           &:hover .discount__rows__card__shadow
             display: block
+        &__heart,
+        &__more
+          transition: 0.3s
+          &:hover
+            transform: scale(1.2)            
   .footer__phone       
     &:hover
       color: $logotext

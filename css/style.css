@@ -3137,16 +3137,18 @@ template {
     background: #cccccc;
   }
 
-  .discount__rows__card__image:hover .discount__rows__card__heart {
-    display: block;
-    cursor: pointer;
-  }
-  .discount__rows__card__image:hover .discount__rows__card__more {
+  .discount__rows__card__image:hover .discount__rows__card__heart, .discount__rows__card__image:hover .discount__rows__card__more {
     display: block;
     cursor: pointer;
   }
   .discount__rows__card__image:hover .discount__rows__card__shadow {
     display: block;
+  }
+  .discount__rows__card__heart, .discount__rows__card__more {
+    transition: 0.3s;
+  }
+  .discount__rows__card__heart:hover, .discount__rows__card__more:hover {
+    transform: scale(1.2);
   }
 
   .footer__phone:hover {
